@@ -1,0 +1,22 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(https://www.benefsnet.com/images/cms/film.gif);">
+  <div class="container text-center ">
+    <h1>Lists</h1>
+  </div>
+</div>
+
+<div class="container d-flex justify-content-between align-items-center p-4 g-col-6" >
+    <h3 class="mb-0">My Lists</h3>
+  <%= link_to "Create a new List", new_list_path, class: "btn btn-flat" %>
+</div>
+
+<div class="container">
+    <% @lists.each do |list| %>
+      <div class="d-flex co-12 col-sm-6 col-md-4 mb-3">
+        <%= link_to list_path(list), class:"text-decoration-none" do %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('style_cine.jpeg') %>)">
+            <%= list.name %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+</div>

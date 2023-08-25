@@ -1,0 +1,12 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(https://www.benefsnet.com/images/cms/film.gif);">
+  <div class="container text-center ">
+    <h1>Create a new List</h1>
+  </div>
+</div>
+
+<div class="container w-50">
+  <%= simple_form_for(@list) do |f| %>
+    <%= f.input :name %>
+    <%= f.submit "Submit List", class: "btn btn-primary" %>
+  <% end %>
+</div>
